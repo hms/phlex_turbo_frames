@@ -1,0 +1,8 @@
+<h1 class="text-3xl mb-4">Users</h1>
+
+<%= form_with url: users_path, method: :get,
+              data: { turbo_frame: 'users', turbo_action: :advance } do |form| %>
+  <%= form.submit "Turbo Me", class: 'inline-flex my-8 px-4 py-2 text-white bg-blue-500 rounded xl' %>
+<% end %>
+
+<turbo-frame id="users"></turbo-frame>
